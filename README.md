@@ -5,7 +5,9 @@ August 31, 2020
 Explore US Bikeshare Data
 
 ### Description
-Describe what your project is about and what it does
+A program to explore bikeshare data for Chicago, New York City, and Washington.
+
+User can filter the data by city, month, and day. The output shows frequent times of travel, popular stations, information about bikeshare users, and more.
 
 ### Files used
 https://www.divvybikes.com/system-data
