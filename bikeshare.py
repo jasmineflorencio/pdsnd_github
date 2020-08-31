@@ -36,6 +36,11 @@ def get_filters():
     else:
         month = 'all'
 
+    # convert month number to month name if month number was selected
+    month_dictionary = {'1': 'january', '2': 'february', '3': 'march', '4': 'april', '5': 'may', '6': 'april'}
+    if month in month_dictionary:
+        month = month_dictionary[month]
+
     day_filter = input('Would you like to filter data by a specific day? Type "yes" or "no". ').lower()
     while day_filter != 'yes' and day_filter != 'no':
         day_filter = input('You provided invalid input. Please type "yes" if you would like to filter by a specific day. Otherwise, type "no". ').lower()
