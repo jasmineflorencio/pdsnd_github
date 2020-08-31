@@ -144,6 +144,7 @@ def user_stats(df, city):
     Displays statistics on bikeshare users.
 
     Args:
+        (DataFrame) df - Pandas DataFrame containing city data filtered by month and day
         (str) city - name of the city to analyze
     """
 
@@ -183,6 +184,7 @@ def raw_data(df):
         end_idx = 5
         df_size = df.shape[0]
 
+        # Continuously display 5 rows of raw data
         while end_idx <= df_size:
             print(df.iloc[start_idx:end_idx])
             print_continue = input('Type "yes" if you would like to see the next 5 rows of raw data: ')
