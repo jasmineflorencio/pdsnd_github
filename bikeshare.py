@@ -28,13 +28,18 @@ def get_filters():
     while month_filter != 'yes' and month_filter != 'no':
         month_filter = input('You provided invalid input. Please type "yes" if you would like to filter by a specific month. Otherwise, type "no". ').lower()
 
-    month_list = {'january', 'february', 'march', 'april', 'may', 'june', 'all'}
+    month_list = {'january', '1', 'february', '2', 'march', '3', 'april', '4', 'may', '5', 'june', '6', 'all'}
     if month_filter == 'yes':
-        month = input('We have data from January through June. Type the month (January, February, March, April, May, or June) you want to filter on. ').lower()
+        month = input('We have data from January through June. Type the month name (January, February, March, April, May, or June) or month number (1, 2, 3, 4, 5, 6) you want to filter on. ').lower()
         while month not in month_list:
-            month = input('You provided invalid input. Please type the full name of the month you want to filter on. If you no longer want to filter by month, type "all". ').lower()
+            month = input('You provided invalid input. Please type the full name of the month or the month number you want to filter on. If you no longer want to filter by month, type "all". ').lower()
     else:
         month = 'all'
+
+    # convert month number to month name if month number was selected
+    month_dictionary = {'1': 'january', '2': 'february', '3': 'march', '4': 'april', '5': 'may', '6': 'april'}
+    if month in month_dictionary:
+        month = month_dictionary[month]
 
     day_filter = input('Would you like to filter data by a specific day? Type "yes" or "no". ').lower()
     while day_filter != 'yes' and day_filter != 'no':
