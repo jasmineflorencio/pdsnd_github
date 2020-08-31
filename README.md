@@ -8,7 +8,10 @@ Explore US Bikeshare Data
 Describe what your project is about and what it does
 
 ### Files used
-Include the files used
+https://www.divvybikes.com/system-data
+https://www.citibikenyc.com/system-data
+https://www.capitalbikeshare.com/system-data
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+https://github.com/udacity/pdsnd_github
+https://www.udacity.com/course/programming-for-data-science-nanodegree--nd104
